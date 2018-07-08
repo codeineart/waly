@@ -1,9 +1,21 @@
+/* Enter and leave animations can use different */
+/* durations and timing functions.              */
+.fade-enter-active {
+  transition: all 0.3s ease;
+}
+.fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.fade-enter, .fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  transform: translateX(10px);
+  opacity: 0;
+}
 .text-shadow {
   text-shadow: black 2px 2px 15px;
 }
 .bisel {
   background: rgba(0, 0, 0, 0.5);
-
   height: 100%;
   width: 100%;
   z-index: -1;
