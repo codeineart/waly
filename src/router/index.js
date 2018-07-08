@@ -3,6 +3,7 @@ import Landing from 'src/views/Landing.vue' // LANDING PAGE
 import Recycle from 'src/views/Recycle.vue' //
 import HowTo from 'src/views/HowTo.vue' //
 import School from 'src/views/School'
+import Centers from 'src/views/Centers'
 import Router from 'vue-router'
 import Vue from 'vue'
 
@@ -35,6 +36,12 @@ const baseRoutes = [
     path: '/colegio',
     name: 'School',
     component: School,
+    children: []
+  },
+  {
+    path: '/centros',
+    name: 'Centers',
+    component: Centers,
     children: []
   }
 ]
