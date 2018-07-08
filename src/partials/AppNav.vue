@@ -31,7 +31,7 @@
       drawer: null,
       labels: [
         {
-          title: 'Home',
+          title: 'Homee',
           icon: 'home'
         },
         {

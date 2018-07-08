@@ -34,7 +34,7 @@ Vue.prototype.$cout = (content = '{{ Input Variable }}', title = 'Simple logging
     console.clear()
   }
   if (banner == true) {
-    console.error(`###################### ${title} ##########################`)
+    console.error(`###################### ${title} #########################`)
   }
 
   let output = purify ? JSON.parse(JSON.stringify(content)) : content

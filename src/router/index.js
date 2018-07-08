@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Landing from 'src/views/Landing.vue';
-//import Dashboard from 'src/views/Dashboard.vue';
+//import Dashboard from 'src/views/Dashboard.vue';s
 
 const baseRoutes = [
   {

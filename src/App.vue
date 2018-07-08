@@ -12,7 +12,7 @@ import AppNav from '@/partials/AppNav'
 export default {
   name: 'app',
   data: () => ({
-    title: 'Your Logo',
+    title: 'Your Lo go',
   }),
   created() {},
   components: {
