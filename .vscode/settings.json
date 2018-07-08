@@ -1,0 +1,7 @@
+{
+  "path-intellisense.mappings": {
+    "/": "${workspaceRoot}",
+    "javascript.validate.enable": true
+  },
+  "python.formatting.provider": "yapf"
+}

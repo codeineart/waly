@@ -1,0 +1,36 @@
+{
+  "version": "0.1.0",
+  "configurations": [
+    {
+      "name": "Launch google chrome",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:8080",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Attach",
+      "type": "chrome",
+      "request": "attach",
+      "port": 9229,
+      "url": "http://localhost:8080/",
+      "webRoot": "${workspaceFolder}"
+    },
+    {
+      "name": "Launch mozilla Firefox",
+      "type": "firefox",
+      "request": "launch",
+      "reAttach": true,
+      "url": "http://localhost:8080/",
+      "webRoot": "${workspaceFolder}",
+      "console": "externalTerminal"
+    }
+  ],
+  "externalconsole": true
+  /**********************************************************
+   *                  USEFUL TIPS HERE                      *
+   **********************************************************/
+
+  // Open google chrome in attach mode
+  // google-chrome --remote-debugging-port=9229
+}
