@@ -31,7 +31,14 @@ export default {
       footer: true,
     },
   }),
-  created() {},
+  methods: {
+    clicked (value) {
+      return value
+    },
+  },
+  created() {
+    console.log(this.clicked())
+  },
   components: {
     AppNav,
     AppFooter,

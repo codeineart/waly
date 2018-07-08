@@ -31,15 +31,25 @@
           <v-text-field placeholder="******* " prepend-icon="verified_user " solo></v-text-field>
         </v-flex>
 
+<<<<<<< Updated upstream
         <!-- DRAWER MENÚ -->
         <!-- <v-list-tile @click="$route.push( '/') " v-for="label in labels " :key="label.title ">
+=======
+        <!-- DRAWER MENÚ 
+        <v-list-tile @click="$route.push( '/') " v-for="label in labels " :key="label.title ">
+>>>>>>> Stashed changes
           <v-list-tile-action>
             <v-icon>calendar</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Título</v-list-tile-title>
           </v-list-tile-content>
+<<<<<<< Updated upstream
         </v-list-tile> -->
+=======
+        </v-list-tile>
+        -->
+>>>>>>> Stashed changes
 
       </v-list>
     </v-navigation-drawer>

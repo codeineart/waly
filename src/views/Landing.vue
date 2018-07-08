@@ -70,10 +70,10 @@
     <section>
       <v-parallax src="/static/header.jpg" height="380">
         <v-layout bisel column align-center justify-center>
-          <div class="headline white--text mb-3 text-xs-center">¿Quieres contribuir al proyecto?</div>
-          <em>Ingresa hoy y forma parte de los pioneros en el cambio</em>
+          <em>Para nosotros la basura es un recurso valorizable que será aprovechado con beneficios para el entorno social y ambiental</em>
+          <div class="headline white--text mb-3 text-xs-center">La naturaleza <strong class="capitalize">todo</strong> lo recicla</div>
           <v-btn class="purple darken-2 mt-5" dark large href="/#/reciclar">
-            Reciclar
+            ¡Quiero Reciclar!
           </v-btn>
         </v-layout>
       </v-parallax>
@@ -145,57 +145,36 @@ export default {
 }
 </style>
 <style lang="stylus">
-.headline {
-  font-size: 32px !important;
-  margin-bottom: 20px;
-}
-
-.subheading {
-  max-width: 700px;
-  margin: 0 20px;
-}
-
-.card__text {
-  text-align: center;
-}
-
-.parallax__content {
-  padding: 0;
-}
-
-.steps-card {
-  width: 100%;
-  margin: 25px 0;
-
-  .step-title {
-    h3 {
-      font-size: 17px;
-    }
-  }
-
-  .step-icon {
-    i {
-      font-size: 70px !important;
-      margin-top: -5px;
-    }
-  }
-
-  &.locate-icon-left {
-    text-align: left;
-
-    .step-icon {
-      margin: 0 15px;
-      float: left;
-    }
-  }
-
-  &.locate-icon-right {
-    text-align: right;
-
-    .step-icon {
-      float: right;
-      margin: 0 15px;
-    }
-  }
-}
+  .headline
+    margin-bottom 20px
+    font-size 32px !important
+    max-width 700px
+  .subheading
+    margin 0 20px
+  .card__text
+    padding 0
+  .parallax__content
+    text-align center
+    width 100%
+    margin 25px 0
+  .steps-card
+        font-size 17px
+      h3
+    .step-title
+    .step-icon
+      i
+        margin-top -5px
+        font-size 70px !important
+    &.locate-icon-left
+      text-align left
+        float left
+      .step-icon
+        margin 0 15px
+    &.locate-icon-right
+      text-align right
+      .step-icon
+    text-transform capitalize
+  .capitalize
+        margin 0 15px
+        float right
 </style>
