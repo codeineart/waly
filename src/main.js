@@ -5,17 +5,20 @@ import Vuex from 'vuex'
 import Router from 'vue-router'
 import VueSession from 'vue-session'
 import VueCookie from 'vue-cookie'
-import './directives/show-adnimation'
 
 // Visual imports
 import icons from 'glyphicons'
+import vuetify from 'vuetify'
+import 'vuetify/dist/vuetify.min.css'
+
 
 // Vue importing
+Vue.use(vuetify)
 Vue.use(VueSession, {
   persist: true
 })
 Vue.use(VueCookie)
-Vue.use(Router)
+// Vue.use(Router)
 Vue.use(Vuex)
 Vue.mixin({
   methods: {
@@ -49,40 +52,15 @@ Vue.use(Datatable)
 
 // Router components
 import App from 'src/App'
-import router from 'src/router'
-import store from 'src/store'
-
-/**
- * to: Route: the target Route Object being navigated to.
- * from: Route: the current route being navigated away from
- * next: function: this function must be called to resolve the hook.
- * action depends on the arguments provided to next.
- */
-router.beforeEach((to, from, next) => {
-  if (to.matched.some(record => record.meta.requiresAuth)) {
-    // navigation requires auth, dispatch
-    store.dispatch('AUTH_TOKEN_CHECK').then(tokenValid => {
-      if (!tokenValid) {
-        alert('Acceso denegado')
-        next('/login')
-      } else {
-        // continue navigation
-        next()
-      }
-    })
-  } else {
-    // route without authorization required
-    next()
-  }
-})
+// import router from 'src/router'
 
 Vue.config.productionTip = false
 Vue.config.silent = false
 
 const app = new Vue({
   el: '#app',
-  store,
-  router,
+  // store,
+  // router,
   template: '<App/>',
   components: {
     App
