@@ -43,8 +43,7 @@
           <v-container grid-list-xl>
             <v-layout row wrap align-center>
 
-
-              <div class="steps-card xs12" v-for="step in steps" :class="'locate-icon-'+step.position" origin="top center 0">
+              <div class="steps-card xs12" v-for="step in steps" :class="'locate-icon-'+step.position" origin="top center 0" :key="step.title">
                 <div class="step-icon">
                   <v-icon x-large class="light-green--text text--lighten-2">{{step.icon}}</v-icon>
                 </div>
@@ -69,9 +68,7 @@
 
     <section>
       <v-parallax src="/static/header.jpg" height="380">
-        <v-layout bisel column align-center justify-center>
           <em>Para nosotros la basura es un recurso valorizable que será aprovechado con beneficios para el entorno social y ambiental</em>
-          <div class="headline white--text mb-3 text-xs-center">La naturaleza <strong class="capitalize">todo</strong> lo recicla</div>
           <v-btn class="purple darken-2 mt-5" dark large href="/#/reciclar">
             ¡Quiero Reciclar!
           </v-btn>
@@ -145,36 +142,57 @@ export default {
 }
 </style>
 <style lang="stylus">
-  .headline
-    margin-bottom 20px
-    font-size 32px !important
-    max-width 700px
-  .subheading
-    margin 0 20px
-  .card__text
-    padding 0
-  .parallax__content
-    text-align center
-    width 100%
-    margin 25px 0
-  .steps-card
-        font-size 17px
-      h3
-    .step-title
-    .step-icon
-      i
-        margin-top -5px
-        font-size 70px !important
-    &.locate-icon-left
-      text-align left
-      float left
-      .step-icon
-        margin 0 15px
-    &.locate-icon-right
-      text-align right
-      .step-icon
-        text-transform capitalize
-  .capitalize
-    margin 0 15px
-    float right
+.headline {
+  font-size: 32px !important;
+  margin-bottom: 20px;
+}
+
+.subheading {
+  max-width: 700px;
+  margin: 0 20px;
+}
+
+.card__text {
+  text-align: center;
+}
+
+.parallax__content {
+  padding: 0;
+}
+
+.steps-card {
+  width: 100%;
+  margin: 25px 0;
+
+  .step-title {
+    h3 {
+      font-size: 17px;
+    }
+  }
+
+  .step-icon {
+    i {
+      font-size: 70px !important;
+      margin-top: -5px;
+    }
+  }
+
+  &.locate-icon-left {
+    text-align: left;
+
+    .step-icon {
+      margin: 0 15px;
+      float: left;
+    }
+  }
+
+  &.locate-icon-right {
+    text-align: right;
+
+    .step-icon {
+      float: right;
+      margin: 0 15px;
+    }
+  }
+}
 </style>
