@@ -70,8 +70,8 @@
     <section>
       <v-parallax src="/static/header.jpg" height="380">
         <v-layout bisel column align-center justify-center>
-          <em>Para nosotros la basura es un recurso valorizable que será aprovechado con beneficios para el entorno social y ambiental</em>
           <div class="headline white--text mb-3 text-xs-center">La naturaleza <strong class="capitalize">todo</strong> lo recicla</div>
+          <em>Para nosotros la basura es un recurso valorizable que será aprovechado con beneficios para el entorno social y ambiental</em>
           <v-btn class="purple darken-2 mt-5" dark large href="/#/reciclar">
             ¡Quiero Reciclar!
           </v-btn>
@@ -108,26 +108,26 @@ export default {
         icon: 'find_in_page',
         title: 'Identificación del residuo',
         description: 'Usuario informa el tipo de residuo que posee.',
-        position: 'left',
+        position: 'left'
       },
       {
         icon: 'category',
         title: 'Opciones de reciclaje',
         description: 'La plataforma entrega información sobre las opciones disponibles para gestionar el residuo.',
-        position: 'right',
+        position: 'right'
       },
       {
         icon: 'gps_fixed',
         title: 'Disposición final',
         description: 'Es el destino final de la RAEE, lo que marca el inicio de su nuevo ciclo de vida, en todas sus materias y componentes son reducidos, reciclados y reusados.',
-        position: 'left',
-      },
+        position: 'left'
+      }
     ],
     howWorks: {
       title: '¿Cómo funciona?',
-      description:
-        'El proceso inicia con el fin de la vida útil de un aparato eléctrico u electrónico, cuando esto sucede el dispositivo pierde su función y pasa a ser un residuo que contiene elementos nocivos para el entorno. Para evitar que el residuo termine en un vertedero nuestra plataforma permite gestionar el aparato de manera responsable, segura y eficiente en 3 simples pasos.',
+      description: 'El proceso inicia con el fin de la vida útil de un aparato eléctrico u electrónico, cuando esto sucede el dispositivo pierde su función y pasa a ser un residuo que contiene elementos nocivos para el entorno. Para evitar que el residuo termine en un vertedero nuestra plataforma permite gestionar el aparato de manera responsable, segura y eficiente en 3 simples pasos.'
     },
+
   }),
   created() {},
   components: {},
@@ -146,35 +146,35 @@ export default {
 </style>
 <style lang="stylus">
   .headline
-    margin-bottom 20px
     font-size 32px !important
-    max-width 700px
+    margin-bottom 20px
   .subheading
+    max-width 700px
     margin 0 20px
   .card__text
-    padding 0
-  .parallax__content
     text-align center
+  .parallax__content
+    padding 0
+  .steps-card
     width 100%
     margin 25px 0
-  .steps-card
-        font-size 17px
-      h3
     .step-title
+      h3
+        font-size 17px
     .step-icon
       i
-        margin-top -5px
         font-size 70px !important
+        margin-top -5px
     &.locate-icon-left
       text-align left
-      float left
       .step-icon
         margin 0 15px
+        float left
     &.locate-icon-right
       text-align right
       .step-icon
-        text-transform capitalize
+        float right
+        margin 0 15px
   .capitalize
-    margin 0 15px
-    float right
+    text-transform capitalize
 </style>
