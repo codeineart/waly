@@ -43,8 +43,7 @@
           <v-container grid-list-xl>
             <v-layout row wrap align-center>
 
-
-              <div class="steps-card xs12" v-for="step in steps" :class="'locate-icon-'+step.position" origin="top center 0">
+              <div class="steps-card xs12" v-for="step in steps" :class="'locate-icon-'+step.position" origin="top center 0" :key="step.title">
                 <div class="step-icon">
                   <v-icon x-large class="light-green--text text--lighten-2">{{step.icon}}</v-icon>
                 </div>
@@ -69,9 +68,9 @@
 
     <section>
       <v-parallax src="/static/header.jpg" height="380">
-        <v-layout bisel column align-center justify-center>
+        <v-layout pa-3 bisel column align-center justify-center>
           <div class="headline white--text mb-3 text-xs-center">¿Quieres contribuir al proyecto?</div>
-          <em>Ingresa hoy y forma parte de los pioneros en el cambio</em>
+          <em class="text-sm-center">Ingresa hoy y forma parte de los pioneros en el cambio</em>
           <v-btn class="purple darken-2 mt-5" dark large href="/#/reciclar">
             Reciclar
           </v-btn>
@@ -165,7 +164,7 @@ export default {
 
 .steps-card {
   width: 100%;
-  margin: 25px 0;
+  margin: 25px 20%;
 
   .step-title {
     h3 {
