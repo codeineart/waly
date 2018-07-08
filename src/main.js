@@ -18,7 +18,7 @@ Vue.use(VueSession, {
   persist: true
 })
 Vue.use(VueCookie)
-// Vue.use(Router)
+Vue.use(Router)
 Vue.use(Vuex)
 Vue.mixin({
   methods: {
@@ -52,7 +52,7 @@ Vue.use(Datatable)
 
 // Router components
 import App from 'src/App'
-// import router from 'src/router'
+import router from 'src/router'
 
 Vue.config.productionTip = false
 Vue.config.silent = false
@@ -60,7 +60,7 @@ Vue.config.silent = false
 const app = new Vue({
   el: '#app',
   // store,
-  // router,
+  router,
   template: '<App/>',
   components: {
     App
