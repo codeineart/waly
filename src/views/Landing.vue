@@ -32,10 +32,10 @@
 
         <v-flex xs12 sm4 class="my-3">
           <div class="text-xs-center">
-            <h2 class="headline">The best way to start developing</h2>
-            <span class="subheading">
-              Cras facilisis mi vitae nunc
-            </span>
+            <h2 class="headline">{{howWorks.title}}</h2>
+            <div class="subheading">
+              {{howWorks.description}}
+            </div>
           </div>
         </v-flex>
 
@@ -43,47 +43,23 @@
           <v-container grid-list-xl>
             <v-layout row wrap align-center>
 
-              <v-flex xs12 md4>
-                <v-card class="elevation-0 transparent">
-                  <v-card-text class="text-xs-center">
-                    <v-icon x-large class="light-green--text text--lighten-2">color_lens</v-icon>
-                  </v-card-text>
-                  <v-card-title primary-title class="layout justify-center">
-                    <div class="headline text-xs-center">Material Design</div>
-                  </v-card-title>
-                  <v-card-text>
-                    Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-                  </v-card-text>
-                </v-card>
-              </v-flex>
 
-              <v-flex xs12 md4>
-                <v-card class="elevation-0 transparent">
-                  <v-card-text class="text-xs-center">
-                    <v-icon x-large class="light-green--text text--lighten-2">flash_on</v-icon>
-                  </v-card-text>
-                  <v-card-title primary-title class="layout justify-center">
-                    <div class="headline">Fast development</div>
-                  </v-card-title>
-                  <v-card-text>
-                    Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-                  </v-card-text>
-                </v-card>
-              </v-flex>
+              <div class="steps-card xs12" v-for="step in steps" :class="'locate-icon-'+step.position" origin="top center 0">
+                <div class="step-icon">
+                  <v-icon x-large class="light-green--text text--lighten-2">{{step.icon}}</v-icon>
+                </div>
+                <div class="step-title">
+                  <h3>
+                    {{step.title}}
+                  </h3>
+                </div>
+                <div class="step-description">
+                  <p>
+                    {{step.description}}
+                  </p>
+                </div>
+              </div>
 
-              <v-flex xs12 md4>
-                <v-card class="elevation-0 transparent">
-                  <v-card-text class="text-xs-center">
-                    <v-icon x-large class="light-green--text text--lighten-2">build</v-icon>
-                  </v-card-text>
-                  <v-card-title primary-title class="layout justify-center">
-                    <div class="headline text-xs-center">Completely Open Sourced</div>
-                  </v-card-title>
-                  <v-card-text>
-                    Cras facilisis mi vitae nunc lobortis pharetra. Nulla volutpat tincidunt ornare. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam in aliquet odio. Aliquam eu est vitae tellus bibendum tincidunt. Suspendisse potenti.
-                  </v-card-text>
-                </v-card>
-              </v-flex>
             </v-layout>
           </v-container>
         </v-flex>
@@ -96,8 +72,8 @@
         <v-layout bisel column align-center justify-center>
           <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
           <em>Kick-start your application today</em>
-          <v-btn class="purple darken-2 mt-5" dark large href="/pre-made-themes">
-            Get Started
+          <v-btn class="purple darken-2 mt-5" dark large href="/#/reciclar">
+            Reciclar
           </v-btn>
         </v-layout>
       </v-parallax>
@@ -127,6 +103,31 @@ export default {
   name: 'Landing',
   data: () => ({
     title: 'Your Logo',
+    steps: [
+      {
+        icon: 'find_in_page',
+        title: 'Identificación del residuo',
+        description: 'Usuario informa el tipo de residuo que posee.',
+        position: 'left'
+      },
+      {
+        icon: 'category',
+        title: 'Opciones de reciclaje',
+        description: 'La plataforma entrega información sobre las opciones disponibles para gestionar el residuo.',
+        position: 'right'
+      },
+      {
+        icon: 'gps_fixed',
+        title: 'Disposición final',
+        description: 'Es el destino final de la RAEE, lo que marca el inicio de su nuevo ciclo de vida, en todas sus materias y componentes son reducidos, reciclados y reusados.',
+        position: 'left'
+      }
+    ],
+    howWorks: {
+      title: '¿Cómo funciona?',
+      description: 'El proceso inicia con el fin de la vida útil de un aparato eléctrico u electrónico, cuando esto sucede el dispositivo pierde su función y pasa a ser un residuo que contiene elementos nocivos para el entorno. Para evitar que el residuo termine en un vertedero nuestra plataforma permite gestionar el aparato de manera responsable, segura y eficiente en 3 simples pasos.'
+    },
+
   }),
   created() {},
   components: {},
@@ -142,4 +143,36 @@ export default {
     position: relative;
   }
 }
+</style>
+<style lang="stylus">
+  .headline
+    font-size 32px !important
+    margin-bottom 20px
+  .subheading
+    max-width 700px
+    margin 0 20px
+  .card__text
+    text-align center
+  .parallax__content
+    padding 0
+  .steps-card
+    width 100%
+    margin 25px 0
+    .step-title
+      h3
+        font-size 17px
+    .step-icon
+      i
+        font-size 70px !important
+        margin-top -5px
+    &.locate-icon-left
+      text-align left
+      .step-icon
+        margin 0 15px
+        float left
+    &.locate-icon-right
+      text-align right
+      .step-icon
+        float right
+        margin 0 15px
 </style>
