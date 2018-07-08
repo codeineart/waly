@@ -1,30 +1,24 @@
 <template>
-<footer>
-  <v-footer class="blue darken-2">
-    <v-layout row wrap align-center>
-      <v-flex xs12>
-        <div class="white--text ml-3">
+  <footer>
+    <v-footer class="purple darken-2">
+      <v-layout row wrap align-center>
+        <v-flex xs12 class="white--text text-xs-center">
           Made with
           <v-icon class="red--text">favorite</v-icon>
-          by
-          <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a>
-          and
-          <a class="white--text" href="https://github.com/vwxyzjn">Costa Huang</a>
-        </div>
-      </v-flex>
-    </v-layout>
-  </v-footer>
-</footer>
+          at
+          <a class="white--text" href="https://angelhack.com/" target="_blank">AngelHacks</a>
+        </v-flex>
+      </v-layout>
+    </v-footer>
+  </footer>
 </template>
 
 <script>
-  export default {
-    name: 'AppFooter',
-    data: () => ({
-     
-    }),
-    props: {
-      source: String
-    }
-  }
+export default {
+  name: 'AppFooter',
+  data: () => ({}),
+  props: {
+    source: String,
+  },
+};
 </script>

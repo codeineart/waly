@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import AppNav from '@/partials/AppNav'
-import AppFooter from '@/partials/AppFooter'
+import AppNav from '@/partials/AppNav';
+import AppFooter from '@/partials/AppFooter';
 export default {
   name: 'app',
   data: () => ({
@@ -19,10 +19,11 @@ export default {
   created() {},
   components: {
     AppNav,
-    AppFooter
-  }
+    AppFooter,
+  },
 };
 </script>
 
 <style lang="scss">
+@import './assets/index.scss';
 </style>
