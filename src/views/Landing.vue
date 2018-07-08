@@ -6,8 +6,8 @@
           <img src="/static/vuetify.png" alt="Vuetify.js" height="200">
           <h1 class="white--text mb-2 display-1 text-xs-center">Parallax Template</h1>
           <div class="subheading mb-3 text-xs-center">Powered by Vuetify</div>
-          <v-btn class="blue lighten-2 mt-5" dark large href="/pre-made-themes">
-            Get Started
+          <v-btn class="blue lighten-2 mt-5" dark large href="/#/reciclar">
+            Quiero reciclar
           </v-btn>
         </v-layout>
       </v-parallax>
@@ -135,21 +135,6 @@
         </v-layout>
       </v-container>
     </section>
-
-    <v-footer class="blue darken-2">
-      <v-layout row wrap align-center>
-        <v-flex xs12>
-          <div class="white--text ml-3">
-            Made with
-            <v-icon class="red--text">favorite</v-icon>
-            by
-            <a class="white--text" href="https://vuetifyjs.com" target="_blank">Vuetify</a>
-            and
-            <a class="white--text" href="https://github.com/vwxyzjn">Costa Huang</a>
-          </div>
-        </v-flex>
-      </v-layout>
-    </v-footer>
   </v-content>
 </template>
 

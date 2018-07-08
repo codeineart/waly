@@ -3,12 +3,14 @@
     <v-app light>
       <AppNav></AppNav>
       <router-view></router-view>
+      <AppFooter></AppFooter>
     </v-app>
   </div>
 </template>
 
 <script>
 import AppNav from '@/partials/AppNav'
+import AppFooter from '@/partials/AppFooter'
 export default {
   name: 'app',
   data: () => ({
@@ -16,7 +18,8 @@ export default {
   }),
   created() {},
   components: {
-    AppNav
+    AppNav,
+    AppFooter
   }
 };
 </script>

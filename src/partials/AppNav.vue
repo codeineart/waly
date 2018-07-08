@@ -14,7 +14,6 @@
           <v-list-tile-title>{{label.title}}</v-list-tile-title>
         </v-list-tile-content>
       </v-list-tile>
-
     </v-list>
   </v-navigation-drawer>
   <v-toolbar color="indigo" dark fixed app>
@@ -28,10 +27,10 @@
   export default {
     name: 'AppNav',
     data: () => ({
-      drawer: null,
+      drawer: false,
       labels: [
         {
-          title: 'Homee',
+          title: 'Home',
           icon: 'home'
         },
         {
