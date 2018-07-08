@@ -70,8 +70,8 @@
     <section>
       <v-parallax src="/static/header.jpg" height="380">
         <v-layout bisel column align-center justify-center>
-          <div class="headline white--text mb-3 text-xs-center">Web development has never been easier</div>
-          <em>Kick-start your application today</em>
+          <div class="headline white--text mb-3 text-xs-center">¿Quieres contribuir al proyecto?</div>
+          <em>Ingresa hoy y forma parte de los pioneros en el cambio</em>
           <v-btn class="purple darken-2 mt-5" dark large href="/#/reciclar">
             Reciclar
           </v-btn>
@@ -108,26 +108,26 @@ export default {
         icon: 'find_in_page',
         title: 'Identificación del residuo',
         description: 'Usuario informa el tipo de residuo que posee.',
-        position: 'left'
+        position: 'left',
       },
       {
         icon: 'category',
         title: 'Opciones de reciclaje',
         description: 'La plataforma entrega información sobre las opciones disponibles para gestionar el residuo.',
-        position: 'right'
+        position: 'right',
       },
       {
         icon: 'gps_fixed',
         title: 'Disposición final',
         description: 'Es el destino final de la RAEE, lo que marca el inicio de su nuevo ciclo de vida, en todas sus materias y componentes son reducidos, reciclados y reusados.',
-        position: 'left'
-      }
+        position: 'left',
+      },
     ],
     howWorks: {
       title: '¿Cómo funciona?',
-      description: 'El proceso inicia con el fin de la vida útil de un aparato eléctrico u electrónico, cuando esto sucede el dispositivo pierde su función y pasa a ser un residuo que contiene elementos nocivos para el entorno. Para evitar que el residuo termine en un vertedero nuestra plataforma permite gestionar el aparato de manera responsable, segura y eficiente en 3 simples pasos.'
+      description:
+        'El proceso inicia con el fin de la vida útil de un aparato eléctrico u electrónico, cuando esto sucede el dispositivo pierde su función y pasa a ser un residuo que contiene elementos nocivos para el entorno. Para evitar que el residuo termine en un vertedero nuestra plataforma permite gestionar el aparato de manera responsable, segura y eficiente en 3 simples pasos.',
     },
-
   }),
   created() {},
   components: {},
@@ -145,34 +145,57 @@ export default {
 }
 </style>
 <style lang="stylus">
-  .headline
-    font-size 32px !important
-    margin-bottom 20px
-  .subheading
-    max-width 700px
-    margin 0 20px
-  .card__text
-    text-align center
-  .parallax__content
-    padding 0
-  .steps-card
-    width 100%
-    margin 25px 0
-    .step-title
-      h3
-        font-size 17px
-    .step-icon
-      i
-        font-size 70px !important
-        margin-top -5px
-    &.locate-icon-left
-      text-align left
-      .step-icon
-        margin 0 15px
-        float left
-    &.locate-icon-right
-      text-align right
-      .step-icon
-        float right
-        margin 0 15px
+.headline {
+  font-size: 32px !important;
+  margin-bottom: 20px;
+}
+
+.subheading {
+  max-width: 700px;
+  margin: 0 20px;
+}
+
+.card__text {
+  text-align: center;
+}
+
+.parallax__content {
+  padding: 0;
+}
+
+.steps-card {
+  width: 100%;
+  margin: 25px 0;
+
+  .step-title {
+    h3 {
+      font-size: 17px;
+    }
+  }
+
+  .step-icon {
+    i {
+      font-size: 70px !important;
+      margin-top: -5px;
+    }
+  }
+
+  &.locate-icon-left {
+    text-align: left;
+
+    .step-icon {
+      margin: 0 15px;
+      float: left;
+    }
+  }
+
+  &.locate-icon-right {
+    text-align: right;
+
+    .step-icon {
+      float: right;
+      margin: 0 15px;
+    }
+  }
+}
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="navbar-component__">
     <!-- MENU DE NAVEGACIÓN -->
     <v-navigation-drawer class="drawer" v-model="drawer" app temporary>
       <v-list>
@@ -15,7 +15,7 @@
               </p>
             </v-flex>
             <v-spacer></v-spacer>
-            <v-icon class="hover " :size="32 ">close</v-icon>
+            <v-icon class="close-icon" :size="32" @click="drawer = !drawer">close</v-icon>
           </v-layout>
         </v-list-tile>
 
@@ -32,20 +32,20 @@
         </v-flex>
 
         <!-- DRAWER MENÚ -->
-        <v-list-tile @click="$route.push( '/') " v-for="label in labels " :key="label.title ">
+        <!-- <v-list-tile @click="$route.push( '/') " v-for="label in labels " :key="label.title ">
           <v-list-tile-action>
             <v-icon>calendar</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>Título</v-list-tile-title>
           </v-list-tile-content>
-        </v-list-tile>
+        </v-list-tile> -->
 
       </v-list>
     </v-navigation-drawer>
 
     <!-- TOOL BAR -->
-    <v-toolbar class=" " fixed app pl-3 pr-3>
+    <v-toolbar class="" fixed app pl-3 pr-3>
       <v-icon :size="36 " color="light-green ">fa fa-leaf</v-icon>
       <v-toolbar-title> {{ title }} </v-toolbar-title>
 
@@ -64,7 +64,7 @@ export default {
   name: 'AppNav',
   data: () => ({
     // drawer: false,
-    drawer: true,
+    drawer: false,
     title: 'waly.io',
   }),
   props: {
@@ -75,5 +75,12 @@ export default {
 
 <style lang="scss">
 .navbar-component__ {
+  .close-icon {
+    cursor: pointer;
+    transition: all 0.3 linear;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
 </style>
